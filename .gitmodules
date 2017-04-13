@@ -1,0 +1,6 @@
+[submodule "hangman-phrase-service"]
+	path = hangman-phrase-service
+	url = https://github.com/yuniersoad/hangman-phrase-service
+[submodule "hangmanplus"]
+	path = hangmanplus
+	url = https://github.com/yuniersoad/hangmanplus
