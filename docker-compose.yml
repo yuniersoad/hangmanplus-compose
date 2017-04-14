@@ -12,6 +12,16 @@ services:
       PHRASES_SERVICE_PORT_8081_TCP_PORT: 8081
   phrase_service:
     build: ./hangman-phrase-service
+    depends_on:
+      - phrases_db
     ports:
       - "8081:8081"
+    environment:
+      DB_HOST: phrases_db
+  phrases_db:
+    image: mongo
+    volumes:
+      - phrases_storage:/data/db
 
+volumes:
+  phrases_storage: {}
