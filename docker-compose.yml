@@ -10,6 +10,15 @@ services:
     environment:
       PHRASES_SERVICE_PORT_8081_TCP_ADDR: phrase_service
       PHRASES_SERVICE_PORT_8081_TCP_PORT: 8081
+  hangmanplus_panel:
+    build: ./hangman-phrase-panel
+    depends_on:
+      - phrase_service
+    ports:
+     - "8082:8082"
+    environment:
+      PHRASES_SERVICE_PORT_8081_TCP_ADDR: phrase_service
+      PHRASES_SERVICE_PORT_8081_TCP_PORT: 8081
   phrase_service:
     build: ./hangman-phrase-service
     depends_on:

@@ -4,3 +4,6 @@
 [submodule "hangmanplus"]
 	path = hangmanplus
 	url = https://github.com/yuniersoad/hangmanplus
+[submodule "hangman-phrase-panel"]
+	path = hangman-phrase-panel
+	url = https://github.com/yuniersoad/hangman-phrase-panel
